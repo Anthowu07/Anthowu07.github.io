@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import BoardGameList from './components/BoardGames';
 import WarehouseList from './components/Warehouses';
 import JoinTable from './components/JoinTable';
