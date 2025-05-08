@@ -1,0 +1,52 @@
+/* Navbar.css */
+
+.nav {
+    background-color: #9bff8e;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav .site-title {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 24px;
+    line-height: 60px;
+    float: left;
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav ul li {
+    /* margin-left: 20px; */
+}
+
+.nav ul li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.nav ul li a:hover {
+    background-color: #0d5a06;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.nav .site-title:hover {
+    color: #000000;
+}
+
+.nav img{
+    width: 100px;
+    float: left;
+}
