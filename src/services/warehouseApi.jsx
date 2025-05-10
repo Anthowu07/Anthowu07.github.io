@@ -1,4 +1,5 @@
-const WAREHOUSE_API_URL = 'http://boardgame-inventory-env-4.eba-9ddwy6jr.us-east-1.elasticbeanstalk.com:8080/api/warehouses';
+const BASE_URL = 'https://boardgameinventory-backend-production.up.railway.app';
+const WAREHOUSE_API_URL = `${BASE_URL}/api/warehouses`;
 //const WAREHOUSE_API_URL = 'http://localhost:8080/api/warehouses';
 // GET request
 export const getWarehouses = async ()=>{

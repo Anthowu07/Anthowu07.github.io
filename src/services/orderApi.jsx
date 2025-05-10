@@ -1,4 +1,5 @@
-const ORDER_API_URL = 'http://boardgame-inventory-env-4.eba-9ddwy6jr.us-east-1.elasticbeanstalk.com:8080/api/orders';
+const BASE_URL = 'https://boardgameinventory-backend-production.up.railway.app';
+const ORDER_API_URL = `${BASE_URL}/api/orders`;
 //const ORDER_API_URL = 'http://localhost:8080/api/orders';
 
 export const getOrders = async () => {
