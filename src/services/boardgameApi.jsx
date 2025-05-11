@@ -1,4 +1,3 @@
-//TODO: Change API URL back to elastic beanstalk (For testing, leave at local host 8080)
 const BASE_URL = 'https://boardgameinventory-backend-production.up.railway.app';
 const BOARDGAME_API_URL = `${BASE_URL}/api/boardgames`;
 //const BOARDGAME_API_URL = 'http://localhost:8080/api/boardgames';

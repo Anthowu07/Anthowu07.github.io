@@ -1,3 +1,6 @@
+// `https://boardgameinventory-backend-production.up.railway.app/api/warehouses/${id}/inventories`
+// `http://localhost:8080/api/warehouses/${id}/inventories`
+
 export const fetchJoinTableData = async (id) => {
     try {
       const response = await fetch(`https://boardgameinventory-backend-production.up.railway.app/api/warehouses/${id}/inventories`);
