@@ -1,6 +1,6 @@
 const BASE_URL = 'https://boardgameinventory-backend-production.up.railway.app';
-const BOARDGAME_API_URL = `${BASE_URL}/api/boardgames`;
-//const BOARDGAME_API_URL = 'http://localhost:8080/api/boardgames';
+//const BOARDGAME_API_URL = `${BASE_URL}/api/boardgames`;
+const BOARDGAME_API_URL = 'http://localhost:8080/api/boardgames';
 
 export const getBoardGames = async () => {
     const response = await fetch(BOARDGAME_API_URL);

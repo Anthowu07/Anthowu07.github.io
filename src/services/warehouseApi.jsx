@@ -1,6 +1,6 @@
 const BASE_URL = 'https://boardgameinventory-backend-production.up.railway.app';
-const WAREHOUSE_API_URL = `${BASE_URL}/api/warehouses`;
-//const WAREHOUSE_API_URL = 'http://localhost:8080/api/warehouses';
+//const WAREHOUSE_API_URL = `${BASE_URL}/api/warehouses`;
+const WAREHOUSE_API_URL = 'http://localhost:8080/api/warehouses';
 // GET request
 export const getWarehouses = async ()=>{
     const response = await fetch(WAREHOUSE_API_URL);

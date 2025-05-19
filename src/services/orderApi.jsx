@@ -1,6 +1,6 @@
 const BASE_URL = 'https://boardgameinventory-backend-production.up.railway.app';
-const ORDER_API_URL = `${BASE_URL}/api/orders`;
-//const ORDER_API_URL = 'http://localhost:8080/api/orders';
+//const ORDER_API_URL = `${BASE_URL}/api/orders`;
+const ORDER_API_URL = 'http://localhost:8080/api/orders';
 
 export const getOrders = async () => {
     const response = await fetch(ORDER_API_URL);
