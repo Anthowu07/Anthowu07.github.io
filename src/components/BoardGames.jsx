@@ -141,13 +141,13 @@ const BoardGameList = () => {
                 </thead>
                 <tbody id="boardgame-table-body">
                     {boardgames.map(boardgame => (
-                        <tr id="board-game-table-row" key={boardgame.boardgame_id}>
-                            <td id="board-game-name">{boardgame.name}</td>
-                            <td id="board-game-publisher">{boardgame.publisher}</td>
-                            <td id="board-game-reorder-quantity">{boardgame.reorder_quantity}</td>
+                        <tr key={boardgame.boardgame_id} data-testid="board-game-row">
+                            <td data-testid="board-game-name">{boardgame.name}</td>
+                            <td data-testid="board-game-publisher">{boardgame.publisher}</td>
+                            <td data-testid="board-game-reorder-quantity">{boardgame.reorder_quantity}</td>
                             <td>
-                                <button id="delete-button" onClick={() => handleDeleteBoardGame(boardgame.boardgame_id)}>Delete</button>
-                                <button id="edit-button" onClick={() => handleEditBoardGame(boardgame)}>Edit</button>
+                                <button data-testid="delete-button" onClick={() => handleDeleteBoardGame(boardgame.boardgame_id)}>Delete</button>
+                                <button data-testid="edit-button" onClick={() => handleEditBoardGame(boardgame)}>Edit</button>
                             </td>
                         </tr>
                     ))}
