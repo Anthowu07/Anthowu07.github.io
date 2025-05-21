@@ -18,6 +18,16 @@ test.afterAll(async () => {
     await apiContext.dispose();
 });
 
+//Take a screenshot after a failure
+test.afterEach(async ({ page }, testInfo) => {
+    if (testInfo.status !== testInfo.expectedStatus) {
+        await page.screenshot({ path: `screenshots/${testInfo.title}-${testInfo.project.name}.png`, fullPage: true });
+
+        const html = await page.locator('body').evaluate(el => el.outerHTML);
+        console.log(html);
+    }
+});
+
 test('should delete board game through UI and confirm it is gone', async ({ page }) => {
 
     //Create a test board game in the DB for testing purposes through an API call
@@ -41,13 +51,11 @@ test('should delete board game through UI and confirm it is gone', async ({ page
         await dialog.accept(); // Click "OK"
     });
 
-    // Find the row with the right board game name, find the delete button in that row and click it
-    const row = page.locator('[data-testid="board-game-row"]', { hasText: testGame.name });
-    const deleteButton = row.getByTestId('delete-button');
-
     //Surround delete with try/catch incase it fails through UI
     try {
-        await deleteButton.click();
+        const row = page.locator('[data-testid="board-game-row"]', { hasText: testGame.name });
+        const deleteButton = row.getByTestId('delete-button');
+        await deleteButton.click({ timeout: 5000 });
         // Assert that the board game is no longer in the table:
         await expect(
             page.locator('[data-testid="board-game-row"]', { hasText: testGame.name })
@@ -59,6 +67,7 @@ test('should delete board game through UI and confirm it is gone', async ({ page
         // Make a DELETE request in case of UI failure
         const deleteResponse = await apiContext.delete(`/api/boardgames/${gameId}`);
         expect(deleteResponse.ok()).toBeTruthy();
+        throw error;
     }
 });
 
