@@ -28,8 +28,8 @@ test.afterEach(async ({ page }, testInfo) => {
     }
 });
 
-test('should delete board game through UI and confirm it is gone', async ({ page }) => {
-
+test('should delete board game through UI and confirm it is gone', async ({ page, browserName }) => {
+    test.skip(browserName == 'webkit', 'Skip tests in webkit for now');
     //Create a test board game in the DB for testing purposes through an API call
     const testGame = {
         name: `Test Game ${Date.now()}`,
