@@ -1,8 +1,22 @@
-# React + Vite
+# Board Game Inventory Manager
+Welcome to the Board Game Inventory Manager project! This application helps you manage and track board game inventories efficiently. It's built using React and Vite for fast development and performance.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
+- View, add, edit, and delete board games from your inventory.
 
-Currently, two official plugins are available:
+- Responsive user interface for seamless experience on all devices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Playwright tests written in TypeScript ensure robust functionality.
+
+## To Open in Browser
+Go to: [anthowu07.github.io/](https://anthowu07.github.io/)
+
+## Running Tests
+Tests are automated using GitHub Actions on push events. Playwright tests written in TypeScript ensure application stability and functionality. Check the Actions tab for test results after each push.
+
+## Technologies Used
+- Frontend: React, Vite
+
+- Testing: Playwright, TypeScript
+
+- CI/CD: GitHub Actions
