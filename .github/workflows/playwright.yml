@@ -28,8 +28,8 @@ jobs:
       - name: Run Playwright tests
         run: npx playwright test
 
-      - name: Generate Playwright HTML report
-        run: npx playwright show-report --output=playwright-report
+      - name: Show HTML report
+        run: npx playwright show-report
 
       - name: Upload Playwright Report
         uses: actions/upload-artifact@v4
